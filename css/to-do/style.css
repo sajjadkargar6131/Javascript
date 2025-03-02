@@ -1,0 +1,197 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Iransans;
+}
+@font-face {
+    font-family: Iransans;
+    src: url(../../fonts/IRANSansWeb.woff2);
+}
+body {
+  direction: rtl;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #333;
+  padding: 20px;
+  position: relative;
+}
+
+/* Container for To-Do list */
+.todo-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Title */
+.todo-container h1 {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+/* Input, Add Button and List Container */
+.todo-input-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.todo-input, .add-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.todo-input {
+  margin-bottom: 20px;
+}
+
+/* Add Button */
+.add-btn {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+}
+
+/* To-Do List */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-height: 400px;  /* Set maximum height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 8px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.todo-item span {
+  word-wrap: break-word;
+  flex: 1;
+  padding-right: 10px;
+}
+
+.todo-item.completed {
+  background-color: #d5f4e6;
+  text-decoration: line-through;
+}
+
+.todo-item .actions {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.todo-item button {
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.todo-item button:hover {
+  color: #c0392b;
+}
+
+.todo-item .edit-btn {
+  background-color: transparent;
+  border: none;
+  color: #f39c12;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.todo-item .edit-btn:hover {
+  color: #e67e22;
+}
+
+/* Task Summary Table */
+.task-summary {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 280px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-align: center;
+  z-index: 2;
+}
+
+.task-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-summary th, .task-summary td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+.task-summary th {
+  background-color: #3fc380;
+  color: white;
+}
+
+.task-summary td {
+  font-size: 14px;
+  color: #ffdddd;
+  background-color: #3fc380;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .todo-container, .task-summary {
+    width: 90%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* برای تیک‌های انجام شده رنگ سبز */
+.complete-btn.checked {
+  background-color: green; /* رنگ سبز برای چک‌باکس‌ها */
+  border-color: green;
+}
+

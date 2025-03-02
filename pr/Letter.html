@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نرم افزار شماره نامه</title>
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/letter/style.css">
+  <link rel="stylesheet" href="../css/jalali-datepicker.css">
+ 
+</head>
+<body>
+  <!-- هدر -->
+  <header class="header d-flex justify-content-between">
+    <div class="logo">نرم افزار شماره نامه</div>
+    <div class="date-time" id="dateTime">
+      <span id="currentDate"></span>
+      <span id="currentTime"></span>
+    </div>
+  </header>
+
+  <div class="container mt-5">
+    <h4>فرم صادر کردن نامه</h4>
+    <form id="letterForm">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="mb-2">
+            <label for="date" class="form-label">تاریخ نامه</label>
+            <input class="form-control" data-jdp id="date" required readonly autocomplete="off">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="mb-3">
+            <label for="title" class="form-label">عنوان نامه</label>
+            <input type="text" class="form-control" id="title" required autocomplete="off">
+          </div>
+        </div>
+        <div class="col-md-5">
+          <label for="receiver" class="form-label">گیرنده نامه</label>
+        <input type="text" class="form-control" id="receiver" required autocomplete="off">       
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="summary" class="form-label">خلاصه نامه</label>
+        <textarea class="form-control" id="summary" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success" id="submitBtn">ایجاد نامه</button>
+    </form>
+
+    <h2 class="mt-5">لیست نامه‌ها</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <input type="text" class="form-control mb-3" id="searchInput" placeholder="جستجو ...">
+      </div>
+    </div>
+
+    <table class="table table-bordered" id="letterTable">
+      <thead class="text-center">
+        <tr>
+          <th>شماره نامه</th>
+          <th>تاریخ</th>
+          <th>عنوان نامه</th>
+          <th>گیرنده نامه</th>
+          <th>خلاصه نامه</th>
+          <th>عملیات</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="row d-flex align-items-center">
+      <div id="deletePasswordDiv" style="display: none;" class="col-md-6">
+        <!-- <label for="deletePasswordInput">لطفاً رمز عبور را وارد کنید:</label> -->
+        <input type="password" id="deletePasswordInput" class="form-control mt-2" style="flex: 1;" placeholder="رمز عبور" >
+        <button class="btn btn-danger mt-2" id="confirmDeleteBtn">تأیید</button>
+      </div>
+    </div>
+    <div class="row  d-flex align-items-center">
+      <div id="deleteAllPasswordDiv" class="col-md-6" " style="display: none;">
+        <!-- <label for="deleteAllPasswordInput">لطفاً رمز عبور را وارد کنید:</label> -->
+        <input type="password" id="deleteAllPasswordInput" class="form-control mt-2" style="flex: 1;" placeholder="رمز عبور">
+        <button class="btn btn-danger mt-2" id="confirmDeleteAllBtn">تأیید</button>
+      </div>
+    </div>
+    
+    
+    <button class="btn btn-danger mb-3" id="deleteAllBtn">حذف تمام اطلاعات</button>
+    <button class="btn btn-success mb-3" id="downloadExcelBtn">دانلود به فرمت اکسل</button>
+    <button class="btn btn-warning mb-3" onclick="window.location.href='../index.html'" >بازگشت</button>    
+  </div>
+
+
+
+  <script src="../js/bootstrap.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jalali-moment.js"></script>
+  <script src="../js//jalali-datepicker.js"></script>
+  <script src="../js/xlsx.js"></script>
+  <script src="../js/letter/script.js"></script>
+    
+  <script>
+    function updateDateTime() {
+      const currentDate = moment().format('jYYYY/jMM/jDD');
+      const currentTime = moment().format('HH:mm:ss');
+      document.getElementById('currentDate').textContent = `تاریخ : ${currentDate}`;
+      document.getElementById('currentTime').textContent = `ساعت : ${currentTime}`;
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+  
+  <script>
+    jalaliDatepicker.startWatch({
+      persianDigits:"true",
+    });
+  </script>
+</body>
+</html>

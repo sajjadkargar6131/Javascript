@@ -1,0 +1,67 @@
+
+@font-face {
+  font-family: Iransans;
+  src: url(../../fonts/IRANSansWeb.woff2);
+}
+body {
+  direction: rtl;
+  background-color: #f4f4f4;
+  padding: 20px;
+  font-family: Iransans;
+}
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.expense-list {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.btn {
+  width: 100%;
+}
+
+.btn-warning {
+  width: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table th, table td {
+  padding: 8px;
+  text-align: right;
+  border: 1px solid #ddd;
+  text-align: center; /* تنظیم افقی مرکز */
+  vertical-align: middle; /* تنظیم عمودی مرکز */
+}
+table th {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+}
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.action-buttons i {
+  cursor: pointer;
+}
+.search-bar {
+  margin-bottom: 20px;
+}
+.report-section {
+  position: absolute;
+  top: 20px;
+  right:25px;
+  width: 250px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}

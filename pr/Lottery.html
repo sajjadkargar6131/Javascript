@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نرم‌افزار قرعه کشی</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/lottery/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mb-4">نرم‌ افزار قرعه کشی</h2>
+
+    <div class="form-group">
+        <label for="nameInput">نام‌ها را وارد کنید (هر بار روی "افزودن" کلیک کنید و یا کلید Enter  را فشار دهید):</label>
+        <div class="mt-2">
+            <input type="text" id="nameInput" class="form-control" placeholder="نام را وارد کنید" />
+            <button class="btn btn-primary mt-4" id="addNameButton">افزودن</button>
+        </div>
+    </div>
+
+    <ul id="nameList" class="list-group mt-3">
+        <!-- نام‌ها در اینجا ظاهر می‌شوند -->
+    </ul>
+
+    <div class="text-center">
+        <button class="btn btn-success mt-4" id="drawButton">شروع قرعه کشی</button>
+    </div>
+
+    <p id="countdown" class="text-center"></p>
+    <p id="winner" class="text-center"></p>
+</div>
+<div class="container d-flex justify-content-end mt-4 mb-2">
+    <a href="../index.html" class="btn btn-warning">
+      بازگشت به منو اصلی
+    </a>
+</div>
+<script src="../js/lottery/sript.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script>
+ 
+</script>
+</body>
+</html>

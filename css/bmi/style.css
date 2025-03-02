@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Iransans;
+    src: url(../../fonts/IRANSansWeb.woff2);
+}
+body {
+    background-color: #f8f9fa;
+    font-family: Iransans;
+    direction: rtl;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.suggestions {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions h5 {
+    font-weight: bold;
+}
+

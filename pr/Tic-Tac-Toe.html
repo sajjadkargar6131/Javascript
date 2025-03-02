@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی دوز (Tic-Tac-Toe)</title>
+    <!-- لینک به CSS بوت استرپ -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tic-toc-toe/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">بازی دوز (Tic-Tac-Toe)</h1>
+        
+        <!-- انتخاب حالت بازی -->
+        <div class="text-center">
+            <button class="btn btn-outline-primary game-mode-btn" id="single-player-btn">بازی با کامپیوتر</button>
+            <button class="btn btn-outline-success game-mode-btn" id="two-player-btn">بازی با بازیکن دیگر</button>
+        </div>
+        
+        <!-- بخش وضعیت بازی -->
+        <div class="status" id="status">
+            لطفاً حالت بازی را انتخاب کنید
+        </div>
+        
+        <!-- تخته بازی -->
+        <div class="board" id="board" style="display: none;">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <!-- دکمه شروع مجدد -->
+        <button class="btn btn-primary restart-btn" id="restart-btn" style="display: none;">شروع مجدد</button>
+    </div>
+    <div class="container d-flex justify-content-end mt-4">
+        <a href="../index.html" class="btn btn-warning">
+          بازگشت به منو اصلی
+        </a>
+    </div>
+    <!-- اسکریپت بوت استرپ -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/tic-toc-toe/script.js"></script>
+</body>
+</html>

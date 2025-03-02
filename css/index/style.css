@@ -1,0 +1,142 @@
+/* متغیرهای رنگی */
+:root {
+    --header-color: rgb(33 37 41);
+    --secondary-color: #f8f9fa;
+    --text-color: #555;
+    --hover-color: #f0f0f0;
+    --dark-color: #343a40;
+}
+
+/* استفاده از فونت سفارشی */
+@font-face {
+    font-family: Iransans;
+    src: url(../../fonts/IRANSansWeb.woff2) format('woff2');
+    font-display: swap;
+}
+
+body {
+    font-family: Iransans, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* هدر */
+header {
+    background-color: var(--header-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header .logo {
+    max-height: 50px;
+}
+
+/* استایل کارت‌ها */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: 78%; 
+    margin-left: auto; /* تراز خودکار از چپ */
+    margin-right: auto; /* تراز خودکار از راست */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-footer {
+    background-color: var(--secondary-color);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #270485;
+}
+
+.card:hover .card-title {
+    color: #73b918;
+}
+
+/* استایل وضعیت و پیام‌ها */
+.status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* استایل فوتر */
+footer {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--header-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* استایل ریسپانسیو برای نمایش بهتر کارت‌ها */
+@media (max-width: 992px) {
+    .card {
+        width: 45%; /* در اندازه‌های متوسط‌تر، عرض کارت‌ها به 45% کاهش می‌یابد */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 90%; /* برای موبایل، عرض کارت‌ها به 90% می‌رسد */
+    }
+}
+
+/* لینک‌ها در منو و هدر */
+.nav-link {
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #01ac5c;
+}
+
+

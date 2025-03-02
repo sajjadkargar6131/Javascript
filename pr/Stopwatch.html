@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کرنومتر</title>
+  <!-- اضافه کردن بوت‌استرپ -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: Iransans; 
+      src: url('../fonts/IRANSansWeb.woff2') format('woff');
+    }
+    body {
+      direction: rtl;
+      background-color: #f8f9fa;
+      padding-top: 50px;
+      font-family: Iransans;
+    }
+    .container {
+      max-width: 600px;
+      text-align: center;
+    }
+    .timer-display {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .btn {
+      font-size: 18px;
+      padding: 15px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>کرنومتر</h1>
+    <div class="timer-display" id="stopwatchDisplay">00:00:00:00</div> <!-- اضافه کردن صدم ثانیه -->
+    <button class="btn btn-success" id="startStopwatch">شروع کرنومتر</button>
+    <button class="btn btn-secondary" id="resetStopwatch">تنظیم مجدد</button>
+    <button class="btn btn-warning" onclick="window.location.href='../index.html'" >بازگشت</button>
+  </div>
+
+  <!-- اضافه کردن جاوا اسکریپت -->
+  <script src="../js/stopwatch/script.js"></script>
+  <!-- اضافه کردن بوت‌استرپ جاوا اسکریپت -->
+  <script src="../js/bootstrap.js"></script>
+</body>
+</html>

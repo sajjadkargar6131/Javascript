@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبدیل تاریخ میلادی به شمسی و بالعکس</title>
+
+    <!-- اضافه کردن بوت استرپ از CDN -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- اضافه کردن moment-jalaali برای تاریخ شمسی -->
+    <link rel="stylesheet" href="../css/jalali-datepicker.css">
+    <!-- اضافه کردن کتابخانه moment.js -->
+    <script src="../js/jalali-moment.js"></script>
+    <link rel="stylesheet" href="../css/date-converter/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center">تبدیل تاریخ میلادی به شمسی و بالعکس</h1>
+
+        <!-- تبدیل میلادی به شمسی -->
+        <section>
+            <h2>تبدیل تاریخ میلادی به شمسی</h2>
+            <form id="convertToJalaliForm" class="form-inline text-center">
+                <div class="form-group input-container">
+                    <input type="date" class="form-control w-100" id="gregorianInput" placeholder="تاریخ میلادی" required>
+                </div>
+                <button type="submit" class="btn btn-primary">تبدیل به شمسی</button>
+            </form>
+            <!-- نمایش نتیجه دقیقاً وسط و زیر دکمه -->
+            <div class="result-container">
+                <div class="result">
+                    تاریخ شمسی: <span id="jalaliOutput"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- تبدیل شمسی به میلادی -->
+        <section>
+            <h2>تبدیل تاریخ شمسی به میلادی</h2>
+            <form id="convertToGregorianForm" class="form-inline text-center">
+                <div class="form-group input-container">
+                    <input type="text" class="form-control w-100" id="jalaliInput" placeholder="تاریخ شمسی (YYYY/MM/DD)" data-jdp id="date" required>
+                </div>
+                <button type="submit" class="btn btn-success">تبدیل به میلادی</button>
+            </form>
+            <!-- نمایش نتیجه دقیقاً وسط و زیر دکمه -->
+            <div class="result-container">
+                <div class="result">
+                    تاریخ میلادی: <span id="gregorianOutput"></span>
+                </div>
+            </div>
+        </section>
+         <!-- دکمه بازگشت به منوی اصلی -->
+        <div class="container d-flex justify-content-end mt-4">
+            <a href="../index.html" class="btn btn-warning">
+            بازگشت به منو اصلی
+            </a>
+        </div>
+    </div>
+
+    <!-- اضافه کردن اسکریپت‌های بوت استرپ -->
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js//jalali-datepicker.js"></script>
+    <script>
+      jalaliDatepicker.startWatch({
+        persianDigits:"true",
+      });
+    </script>
+    <script src="../js/date-converter/script.js"></script>
+</body>
+
+</html>

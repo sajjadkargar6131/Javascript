@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>نرم‌افزار موفقیت</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/book/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center my-5">نرم‌افزار معرفی کتاب</h1>
+    
+    <!-- تقسیم صفحه به دو بخش -->
+    <div class="row">
+        <!-- بخش کتاب پیشنهادی -->
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <h3>کتاب پیشنهادی امروز:</h3>
+                    <p id="book" class="lead">Loading...</p>
+                    <button id="prevBook" class="btn btn-info mt-3"> قبلی</button>
+                    <button id="nextBook" class="btn btn-secondary mt-3"> بعدی</button>
+                    <button id="readBook" class="btn btn-success mt-3">کتاب را خواندم</button>
+                    <button id="addToFavorites" class="btn btn-primary mt-3">اضافه به علاقه‌مندی‌ها</button>
+                    <button class="btn btn-warning mt-3" onclick="window.location.href='../index.html'" >بازگشت</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش کارت تعداد و لیست کتاب‌ها -->
+        <div class="col-md-5">
+            <!-- کارت تعداد کتاب‌ها + لیست کتاب‌ها -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">کتاب‌های خوانده‌شده</h5>
+                    <p class="card-text" id="readBooksCount" style="font-size: 18px; font-weight: bold;">تعداد کتاب‌های خوانده‌شده: 0</p>
+                    <ul id="readBooksList" class="list-group mt-3"></ul>
+                </div>
+            </div>
+
+            <!-- کارت تعداد کتاب‌های علاقه‌مندی -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">لیست علاقه‌مندی</h5>
+                    <p class="card-text" id="favoritesCount" style="font-size: 18px; font-weight: bold;">تعداد کتاب‌های علاقه‌مندی: 0</p>
+                    <ul id="favoritesList" class="list-group mt-3"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal برای نمایش توضیحات کتاب -->
+<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookModalLabel">توضیحات کتاب</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="bookDescriptionContent">
+                <!-- توضیحات کتاب اینجا نمایش داده می‌شود -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js -->
+<script src="../js/popper.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery.js"></script>
+
+<!-- Custom JS -->
+<script src="../js/book/script.js"></script>
+
+</body>
+</html>

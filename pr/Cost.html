@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نرم افزار پیگیری مخارج</title>
+
+  <!-- اضافه کردن بوت‌استرپ -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <!-- اضافه کردن فونت‌آوسوم برای آیکن‌ها -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom-->
+  <link rel="stylesheet" href="../css/cost/style.css">
+  <!-- اضافه کردن moment-jalaali برای تاریخ شمسی -->
+  <link rel="stylesheet" href="../css/jalali-datepicker.css">
+</head>
+<body>
+
+  <!-- جدول گزارش هزینه‌ها -->
+  <div class="report-section" id="expenseReport">
+    <h5>گزارش هزینه‌ها</h5>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="bg-warning text-center">
+          <th>دسته‌بندی</th>
+          <th>مجموع هزینه</th>
+        </tr>
+      </thead>
+      <tbody id="totalExpensesByCategory">
+        <!-- سطرهای گزارش هزینه‌ها در اینجا نمایش داده می‌شود -->
+      </tbody>
+    </table>
+    <h6 id="totalExpenses"></h6>
+  </div>
+
+  <div class="container">
+    <h2 class="text-center">نرم افزار پیگیری مخارج</h2>
+
+    <form id="expenseForm">
+      <div class="mb-3">
+        <label for="expenseName" class="form-label">عنوان هزینه</label>
+        <input type="text" class="form-control" id="expenseName" placeholder="عنوان هزینه را وارد کنید" required>
+      </div>
+      <div class="mb-3">
+        <label for="expenseAmount" class="form-label">مقدار هزینه (تومان)</label>
+        <input type="number" min="1" class="form-control" id="expenseAmount" placeholder="مقدار هزینه را وارد کنید" required>
+      </div>
+      <div class="mb-3">
+        <label for="expenseCategory" class="form-label">دسته‌بندی هزینه</label>
+        <select class="form-control" id="expenseCategory" required>
+          <option value="">انتخاب دسته‌بندی</option>
+          <option value="پوشاک">پوشاک</option>
+          <option value="خوراک">خوراک</option>
+          <option value="قبض">قبض</option>
+          <option value="تفریح">تفریح</option>
+          <option value="غذا">غذا</option>
+          <option value="سفر">سفر</option>
+          <option value="خودرو">خودرو</option>
+          <option value="بدهی">بدهی</option>
+          <option value="وام">وام</option>
+          <option value="سایر">سایر</option>
+
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="expenseDate" class="form-label">تاریخ هزینه (شمسی)</label>
+        <input  class="form-control" id="expenseDate" data-jdp id="date" required readonly autocomplete="off" placeholder="تاریخ هزینه را وارد کنید" >
+      </div>
+      <button type="submit" class="btn btn-primary" id="submitBtn">اضافه کردن هزینه</button>
+    </form>
+
+    <!-- جعبه جستجو -->
+    <div class="mb-3 mt-2 search-bar">
+      <label for="searchExpense" class="form-label">جستجو</label>
+      <input type="text" class="form-control" id="searchExpense" placeholder="عنوان، دسته‌بندی یا مقدار هزینه را جستجو کنید">
+    </div>
+
+    <!-- جدول هزینه‌ها -->
+    <div class="expense-list" id="expenseList">
+      <!-- جدول هزینه‌ها در اینجا نمایش داده می‌شود -->
+    </div>
+    <!-- دکمه بازگشت به منوی اصلی -->
+    <div class="container d-flex justify-content-end mt-4">
+      <a href="../index.html" class="btn btn-warning">
+        بازگشت به منو اصلی
+      </a>
+    </div>
+  </div>
+
+  <!-- اضافه کردن جاوا اسکریپت -->
+  <script src="../js/cost/script.js"></script>
+  <script src="../js//jalali-datepicker.js"></script>
+  <!-- اضافه کردن بوت‌استرپ جاوا اسکریپت -->
+  <script src="../js/bootstrap.js"></script>
+  <script>
+    jalaliDatepicker.startWatch();
+  </script>
+</body>
+</html>

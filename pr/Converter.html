@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبدیل واحدها</title>
+    <!-- لینک‌های استایل برای Bootstrap و FontAwesome -->
+    <link href="../css/bootstrap.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/converter/style.css">
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">تبدیل واحدها</h1>
+        
+        <!-- انتخاب نوع واحد -->
+        <div class="mb-3">
+            <label for="category" class="form-label">نوع واحد را انتخاب کنید:</label>
+            <select id="category" class="form-select" onchange="changeCategory()">
+                <option value="length">طول <i class="fas fa-ruler icon"></i></option>
+                <option value="temperature">دما <i class="fas fa-thermometer-half icon"></i></option>
+                <option value="area">مساحت <i class="fas fa-square icon"></i></option>
+                <option value="volume">حجم <i class="fas fa-cube icon"></i></option>
+                <option value="weight">وزن <i class="fas fa-weight-hanging icon"></i></option>
+            </select>
+        </div>
+
+        <!-- فرم تبدیل واحد -->
+        <div id="formContainer"></div>
+
+        <button class="btn btn-primary mt-3" onclick="convertUnit()">تبدیل <i class="fas fa-exchange-alt"></i></button>
+
+        <div class="result mt-4" id="result"></div>
+
+        <div class="container d-flex justify-content-end mt-4">
+            <a href="../index.html" class="btn btn-warning">
+             بازگشت به منو اصلی
+            </a>
+        </div>
+    </div>
+    <script src="../js/converter/script.js"></script>
+    <!-- لینک‌های جاوااسکریپت برای Bootstrap -->
+    <script src="../js/bootstrap.js"></script>
+</body>
+</html>

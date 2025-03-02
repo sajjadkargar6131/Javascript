@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Iransans;
+    src: url(../../fonts/IRANSansWeb.woff2);
+}
+
+/* تنظیمات کلی صفحه برای راست‌چین کردن */
+body {
+    direction: rtl;
+    font-family: Iransans;
+    text-align: right;
+}
+
+/* استایل‌های مخصوص دکمه‌ها و انیمیشن‌ها */
+#winner {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745; /* رنگ سبز */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7); /* سایه برای برجسته شدن */
+    animation: winnerAnimation 1s ease-out infinite; /* انیمیشن دائمی */
+}
+
+/* انیمیشن برای نام برنده */
+@keyframes winnerAnimation {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#countdown {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.highlight {
+    background-color: #f0f8ff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+
+.winner {
+    background-color: #FFD700 !important;  /* پس‌زمینه طلایی برای برنده */
+    color: white !important;  /* رنگ متن سفید */
+    font-weight: bold !important;  /* برجسته کردن متن */
+}
+
+
+/* دکمه‌های غیرفعال */
+.btn-disable {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* انیمیشن مخصوص برای انتخاب رندوم نام‌ها */
+@keyframes highlightAnimation {
+    0% { background-color: #f0f8ff; }
+    50% { background-color: #e0f7fa; }
+    100% { background-color: #f0f8ff; }
+}
+
+.highlighting {
+    animation: highlightAnimation 0.5s infinite;
+}
+
+/* استایل برای طراحی جمع و جورتر */
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* استایل لیست و دکمه‌ها */
+.list-group-item {
+    display: flex; /* استفاده از فلکس برای چیدمان داخلی */
+    justify-content: space-between; /* فاصله بین محتوای نام و دکمه */
+    align-items: center; /* تراز کردن عمودی محتوای لیست */
+    padding: 10px; /* فاصله داخلی */
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* دکمه‌های حذف */
+.btn-delete {
+    margin-left: 0; /* دکمه به سمت چپ می‌رود */
+    background-color: #dc3545; /* رنگ پس‌زمینه قرمز */
+    border-color: #dc3545; /* رنگ مرز قرمز */
+    color: white; /* رنگ متن سفید */
+    padding: 5px 10px;
+    font-size: 0.9rem; /* اندازه فونت کوچک‌تر */
+    border-radius: 5px;
+    cursor: pointer; /* نشانگر دست هنگام حرکت روی دکمه */
+    transition: background-color 0.3s ease; /* انتقال نرم رنگ دکمه */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* رنگ پس‌زمینه قرمز تیره در حالت هاور */
+}
+
+/* دکمه‌های اضافی */
+.btn {
+    width: 100%; /* عرض کامل برای دکمه‌ها */
+}
+
+.btn-warning, .btn-danger {
+    width: auto; /* عرض کامل برای دکمه‌ها */
+}

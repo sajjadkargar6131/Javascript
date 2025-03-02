@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبه شاخص توده بدنی (BMI)</title>
+    <!-- لینک به بوت استرپ CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bmi/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h3>محاسبه شاخص توده بدنی (BMI)</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="bmiForm">
+                            <div class="mb-3">
+                                <label for="weight" class="form-label">وزن (کیلوگرم)</label>
+                                <input type="number" class="form-control" id="weight" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="height" class="form-label">قد (سانتیمتر)</label>
+                                <input type="number" class="form-control" id="height" required>
+                            </div>
+                            <button type="submit" class="btn btn-success mt-2">محاسبه</button>
+                            <button class="btn btn-warning mt-2"" onclick="window.location.href='../index.html'" >بازگشت</button>
+                        </form>
+
+                        <div id="result" class="result text-center"></div>
+                        <div id="suggestions" class="suggestions" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../js/bmi/script.js"></script>
+    <!-- لینک به بوت استرپ JS -->
+    <script src="../js/bootstrap.js"></script>
+</body>
+</html>
