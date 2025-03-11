@@ -26,7 +26,6 @@ function saveLetter(letter) {
 
 function deleteLetter(number) {
     letters = letters.filter(letter => letter.number !== number);
-    updateLetterNumbers();
     localStorage.setItem('letters', JSON.stringify(letters));
     renderTable(letters);
 }
